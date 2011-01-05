@@ -24,13 +24,15 @@ sie drauf zugegriffen werden.</p>
 <br />
 
 <p>Folgender Code muss in das Standardtemplate eingetragen werden, damit
-der Zugriff auch tatsächlich gesperrt wird:</p>
+der Zugriff auch tatsächlich gesperrt wird.<br />
+Die Zieldomain muss dann nur noch angepasst werden.</p>
+
 <br />
 <pre>
 // wenn der Artikelstatus auf "Gesperrt" gesetzt ist, dann erfolgt keine Ausgabe des Artikels
 if ($this->getValue('status') == 2 && (!isset($_SESSION['UID']) || $_SESSION['UID'][$REX['INSTNAME']] <= 0))  {
   header ('HTTP/1.1 301 Moved Permanently');
-  header ('location: http://www.ZielDoomain.Tld');
+  header ('location: http://www.ZielDomain.Tld');
 }
 </pre>
 <br />

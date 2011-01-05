@@ -14,7 +14,7 @@ $mypage = 'ko_accessdenied';
 $REX['ADDON']['rxid'][$mypage] = '853';
 //$REX['ADDON']['name'][$mypage] = 'ko_AccessDenied';
 $REX['ADDON']['perm'][$mypage] = 'ko_accessdenied[]';
-$REX['ADDON']['version'][$mypage] = '0.1';
+$REX['ADDON']['version'][$mypage] = '1.0';
 $REX['ADDON']['author'][$mypage] = 'Sven Eichler';
 $REX['ADDON']['supportpage'][$mypage] = 'forum.redaxo.de';
 
