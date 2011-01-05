@@ -2,11 +2,10 @@
 
 /**
  * Access Denied "Addon"
- * 
+ *
  * @author redaxo[at]koalashome[dot]de Sven Eichler
- * 
+ *
  * @package redaxo4
- * @version svn:$Id$
  */
 
 

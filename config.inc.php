@@ -2,11 +2,10 @@
 
 /**
  * Access Denied "Addon"
- * 
+ *
  * @author redaxo[at]koalashome[dot]de Sven Eichler
- * 
+ *
  * @package redaxo4
- * @version svn:$Id$
  */
 
 $mypage = 'ko_accessdenied';
@@ -25,14 +24,14 @@ if ($REX['REDAXO'] && $REX['USER']) {
 
   // Sprachdateien anhaengen
   $I18N->appendFile(dirname(__FILE__) .'/lang/');
-  
+
   rex_register_extension('ART_STATUS_TYPES', 'rex_status_types');
   rex_register_extension('CAT_STATUS_TYPES', 'rex_status_types');
-  
+
   /**
    * Füge Artikel- und Kategoriestatus 'Gesperrt' hinzu.
    * Verwende als CSS-Klasse die vom Offline-Status
-   * 
+   *
    * @param array $params
    * @return array $subject
    */
@@ -42,5 +41,5 @@ if ($REX['REDAXO'] && $REX['USER']) {
     $subject[] = array($I18N->msg('status_gesperrt'), 'rex-offline');
     return $subject;
   }
-  
+
 }
