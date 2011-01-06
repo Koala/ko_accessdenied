@@ -30,8 +30,10 @@ Die Zieldomain muss dann nur noch angepasst werden.</p>
 <br />
 <pre>
 // wenn der Artikelstatus auf "Gesperrt" gesetzt ist, dann erfolgt keine Ausgabe des Artikels
+// Achtung: "ZielDomain.Tld" durch eigene Domain ersetzen !!!
 if ($this->getValue('status') == 2 && (!isset($_SESSION['UID']) || $_SESSION['UID'][$REX['INSTNAME']] <= 0))  {
-  header ('HTTP/1.1 301 Moved Permanently');
+  //header ('HTTP/1.1 301 Moved Permanently'); // nur sinnvoll, wenn die gesperrten Seiten auch zukünftig nicht erreichbar sein sollen
+  header ('HTTP/1.1 307 Temporary Redirect'); // für vorübergehende nicht Erreichbarkeit
   header ('location: http://www.ZielDomain.Tld');
 }
 </pre>
